@@ -1,6 +1,6 @@
 {
-  "short_name": "puzzle",
-  "name": "bella's puzzles",
+  "short_name": "personal",
+  "name": "personal site",
 
   "start_url": ".",
   "display": "standalone",
