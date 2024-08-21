@@ -9,14 +9,12 @@ var quoraLink = <Link color underline target="_blank" href="https://quora.com/">
 
 const BelCard = () => (
     <Card width="100%" shadow type='cyan'> 
-        <Grid.Container gap={2} justify="center">
+        <Grid.Container gap={2} justify="center" wrap='wrap-reverse'>
             {/* Greeting */}
             <Grid xs={24} md={12}>
                 <p>
-                <Text h3>hi i'm Bella! ✨</Text>
-                <p>
-                full-stack developer who likes cats, keyboards, tea, and lame jokes
-                </p>
+                <Text h3>✨ hi i'm Bella!</Text>
+                <Text small>full-stack developer who likes cats, keyboards, tea, and lame jokes</Text>
                 <p>
                 <i>currently</i> →<br />
                 ⊹ software engineer @ {netflixLink} 🍿
