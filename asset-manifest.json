@@ -1,15 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.c335c0f5.chunk.css",
-    "main.js": "/static/js/main.ea565667.chunk.js",
-    "main.js.map": "/static/js/main.ea565667.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.6d2706f6.js",
-    "runtime~main.js.map": "/static/js/runtime~main.6d2706f6.js.map",
-    "static/js/2.49934b0b.chunk.js": "/static/js/2.49934b0b.chunk.js",
-    "static/js/2.49934b0b.chunk.js.map": "/static/js/2.49934b0b.chunk.js.map",
+    "main.css": "/static/css/main.e6c13ad2.css",
+    "main.js": "/static/js/main.c1e85164.js",
+    "static/js/453.554a4cec.chunk.js": "/static/js/453.554a4cec.chunk.js",
+    "static/media/bella-headshot.png": "/static/media/bella-headshot.25dcc0a67deac9401e6a.png",
+    "static/media/Bella_Le_Resume.pdf": "/static/media/Bella_Le_Resume.b103046fc42533376e27.pdf",
     "index.html": "/index.html",
-    "precache-manifest.de8a72ddecd1c69133b60b048de8fb1a.js": "/precache-manifest.de8a72ddecd1c69133b60b048de8fb1a.js",
-    "service-worker.js": "/service-worker.js",
-    "static/css/main.c335c0f5.chunk.css.map": "/static/css/main.c335c0f5.chunk.css.map"
-  }
+    "main.e6c13ad2.css.map": "/static/css/main.e6c13ad2.css.map",
+    "main.c1e85164.js.map": "/static/js/main.c1e85164.js.map",
+    "453.554a4cec.chunk.js.map": "/static/js/453.554a4cec.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.c1e85164.js"
+  ]
 }
