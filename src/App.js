@@ -7,6 +7,7 @@ const pinkTheme = Themes.createFromLight({
     background: '#fcf0f3',
     cyan: '#fff',
     link: '#d68195',
+    selection: '#ff7092'
   }
 })
 
