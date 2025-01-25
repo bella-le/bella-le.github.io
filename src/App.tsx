@@ -9,20 +9,29 @@ import { Things } from './components/Things.tsx';
 
 const App = () => {
   const [currentView, setCurrentView] = useState('home');
-  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isTitleTransitioning, setIsTitleTransitioning] = useState(false);
+  const [isContentTransitioning, setIsContentTransitioning] = useState(false);
 
   const handleClick = (view: string) => {
-    if (currentView === 'home' || view === 'home') {
-      setIsTransitioning(true);
-    }
     if (view === 'blog') {
       window.location.href = 'https://blog.bella-le.com';
-    } else {
+      return;
+    }
+    
+    // Only trigger title transition when switching to/from home
+    if (currentView === 'home' || view === 'home') {
+      setIsTitleTransitioning(true);
       setTimeout(() => {
-        setCurrentView(view);
-        setIsTransitioning(false);
+        setIsTitleTransitioning(false);
       }, 300);
     }
+
+    // Always trigger content transition
+    setIsContentTransitioning(true);
+    setTimeout(() => {
+      setCurrentView(view);
+      setIsContentTransitioning(false);
+    }, 300);
   };
 
   const getContent = () => {
@@ -30,7 +39,7 @@ const App = () => {
       case 'about': return <About />;
       case 'resume': return <Resume />;
       case 'contact': return <Contact />;
-      case 'things': return <Things />;
+      case 'toybox': return <Things />;
       default: return null;
     }
   };
@@ -39,7 +48,7 @@ const App = () => {
     <div className="container">
       <div
         className={`title ${currentView === 'home' ? 'title-large' : 'title-small'} ${
-          isTransitioning ? 'title-fade-up' : ''
+          isTitleTransitioning ? 'title-fade-up' : ''
         }`}
         onClick={() => currentView !== 'home' && handleClick('home')}
         style={currentView === 'home' ? 
@@ -56,7 +65,7 @@ const App = () => {
           <h1 className="text-4xl font-bold text-center text-[#d692a3]">bella</h1>
         )}
       </div>      
-      <div className={`content ${isTransitioning ? 'content-transitioning' : ''}`}>
+      <div className={`content ${isContentTransitioning ? 'content-transitioning' : ''}`}>
         {currentView !== 'home' && getContent()}
       </div>
 
