@@ -36,7 +36,9 @@ const App = () => {
   return (
     <div className="container">
       <div
-        className={`title ${currentView === 'home' ? 'title-large' : 'title-small'}`}
+        className={`title ${currentView === 'home' ? 'title-large' : 'title-small'} ${
+          isTransitioning ? 'title-fade-up' : ''
+        }`}
         onClick={() => currentView !== 'home' && handleClick('home')}
         style={currentView === 'home' ? 
           {width: '100%', maxWidth: 800, height: 200} : 
