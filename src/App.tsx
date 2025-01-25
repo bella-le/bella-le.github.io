@@ -12,7 +12,9 @@ const App = () => {
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   const handleClick = (view: string) => {
-    setIsTransitioning(true);
+    if (currentView === 'home' || view === 'home') {
+      setIsTransitioning(true);
+    }
     if (view === 'blog') {
       window.location.href = 'https://blog.bella-le.com';
     } else {

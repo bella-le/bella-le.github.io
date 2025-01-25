@@ -4,7 +4,7 @@ export const Resume = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="card" style={{maxWidth: '90vw', width: '1200px'}}>
+    <div className="card">
       <div className="resume-header">
         <h2 className="section-heading mb-0">resume 📄</h2>
         <div className="resume-buttons">

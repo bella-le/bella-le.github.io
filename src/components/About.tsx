@@ -16,6 +16,7 @@ export const About = () => (
         <p>
           speaks 🇺🇸🇻🇳🇫🇷🇯🇵
         </p>
+        <p><a href="mailto:hello@bella-le.com" className="email">hello@bella-le.com</a></p>
       </div>
     </div>
   </div>
