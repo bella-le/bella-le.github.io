@@ -1,0 +1,71 @@
+import React, { useState } from 'react';
+import { Nav } from './components/Nav.tsx';
+import { About } from './components/About.tsx';
+import { Contact } from './components/Contact.tsx';
+import { Resume } from './components/Resume.tsx';
+import './styles.css';
+import ASCIIText from './components/blocks/TextAnimations/ASCIIText/ASCIIText.jsx';
+
+const App = () => {
+  const [currentView, setCurrentView] = useState('home');
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  const handleClick = (view: string) => {
+    setIsTransitioning(true);
+    if (view === 'blog') {
+      window.location.href = 'https://blog.bella-le.com';
+    } else {
+      setTimeout(() => {
+        setCurrentView(view);
+        setIsTransitioning(false);
+      }, 300);
+    }
+  };
+
+  const getContent = () => {
+    switch(currentView) {
+      case 'about': return <About />;
+      case 'resume': return <Resume />;
+      case 'contact': return <Contact />;
+      default: return null;
+    }
+  };
+
+  return (
+    <div className="container">
+      <div
+        className={`title ${currentView === 'home' ? 'title-large' : 'title-small'} 
+   w-[300px] h-[150px] md:w-[800px] md:h-[300px] -mt-48 md:-mt-64`}
+        onClick={() => currentView !== 'home' && handleClick('home')}
+        // style={{ height: '300px', width: '800px' }}
+        >
+        <ASCIIText
+          text='bella le'
+          textFontSize={40}
+          enableWaves={true}
+        />
+      </div>
+      {/* <h1 
+        className={`title ${currentView === 'home' ? 'title-large' : 'title-small'}`}
+        onClick={() => currentView !== 'home' && handleClick('home')}
+      >
+        bella le
+        {/* <ASCIIText
+          text='bella le'
+          textFontSize={20}
+          planeBaseHeight={8}
+          enableWaves={true}
+          asciiFontSize={8}
+        /> */}
+      {/* </h1> */}
+      
+      <div className={`content ${isTransitioning ? 'content-transitioning' : ''}`}>
+        {currentView !== 'home' && getContent()}
+      </div>
+
+      <Nav currentView={currentView} handleClick={handleClick} />
+    </div>
+  );
+};
+
+export default App;
