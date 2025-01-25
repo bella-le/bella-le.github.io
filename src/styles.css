@@ -31,8 +31,7 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-bottom: 15vh; /* Adjust this value to control how high the content sits */
-  /* padding: 1rem; */
+  padding: 1rem;
   overflow-x: hidden;
 }
 

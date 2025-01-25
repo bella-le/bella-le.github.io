@@ -36,14 +36,19 @@ const App = () => {
   return (
     <div className="container">
       <div
-        className={`title ${currentView === 'home' ? 'title-large' : 'title-small'} w-[300px] h-[200px] md:w-[900px] md:h-[200px]`}
+        className={`title ${currentView === 'home' ? 'title-large' : 'title-small'}`}
         onClick={() => currentView !== 'home' && handleClick('home')}
+        style={currentView === 'home' ? {width: 800, height: 300} : {width: 'auto', height: 'auto'}}
       >
-        <ASCIIText
-          text='bella'
-          textFontSize={40}
-          enableWaves={true}
-        />
+        {currentView === 'home' ? (
+          <ASCIIText
+            text='bella'
+            textFontSize={40}
+            enableWaves={true}
+          />
+        ) : (
+          <h1 className="text-4xl font-bold text-center text-[#d692a3]">bella</h1>
+        )}
       </div>      
       <div className={`content ${isTransitioning ? 'content-transitioning' : ''}`}>
         {currentView !== 'home' && getContent()}
