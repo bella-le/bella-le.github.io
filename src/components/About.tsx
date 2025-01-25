@@ -11,7 +11,10 @@ export const About = () => (
       <div className="flex-1">
         <h2 className="section-heading">about ✨</h2>
         <p>
-          full-stack developer who likes cats, tea, and lame jokes. i like making cute things out of my own whims and for others to enjoy!
+          tea-powered yappy full-stack developer living in San Francisco with 🐈🐈‍⬛
+        </p>
+        <p>
+          speaks 🇺🇸🇻🇳🇫🇷🇯🇵
         </p>
       </div>
     </div>

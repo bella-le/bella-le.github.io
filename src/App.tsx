@@ -5,6 +5,7 @@ import { Contact } from './components/Contact.tsx';
 import { Resume } from './components/Resume.tsx';
 import './styles.css';
 import ASCIIText from './components/blocks/TextAnimations/ASCIIText/ASCIIText.jsx';
+import { Things } from './components/Things.tsx';
 
 const App = () => {
   const [currentView, setCurrentView] = useState('home');
@@ -27,6 +28,7 @@ const App = () => {
       case 'about': return <About />;
       case 'resume': return <Resume />;
       case 'contact': return <Contact />;
+      case 'things': return <Things />;
       default: return null;
     }
   };
@@ -34,7 +36,7 @@ const App = () => {
   return (
     <div className="container">
       <div
-        className={`title ${currentView === 'home' ? 'title-large' : 'title-small'} w-[300px] h-[200px] md:w-[800px] md:h-[200px]`}
+        className={`title ${currentView === 'home' ? 'title-large' : 'title-small'} w-[300px] h-[200px] md:w-[900px] md:h-[200px]`}
         onClick={() => currentView !== 'home' && handleClick('home')}
       >
         <ASCIIText
@@ -42,21 +44,7 @@ const App = () => {
           textFontSize={40}
           enableWaves={true}
         />
-      </div>
-      {/* <h1 
-        className={`title ${currentView === 'home' ? 'title-large' : 'title-small'}`}
-        onClick={() => currentView !== 'home' && handleClick('home')}
-      >
-        bella le
-        {/* <ASCIIText
-          text='bella le'
-          textFontSize={20}
-          planeBaseHeight={8}
-          enableWaves={true}
-          asciiFontSize={8}
-        /> */}
-      {/* </h1> */}
-      
+      </div>      
       <div className={`content ${isTransitioning ? 'content-transitioning' : ''}`}>
         {currentView !== 'home' && getContent()}
       </div>

@@ -1,6 +1,6 @@
 export const Nav = ({ currentView, handleClick }) => (
     <nav className="nav">
-      {['about', 'blog', 'resume', 'contact'].map((link) => (
+      {['about', 'blog', 'resume', 'contact', 'things'].map((link) => (
         <button 
           key={link}
           onClick={() => handleClick(link)}
