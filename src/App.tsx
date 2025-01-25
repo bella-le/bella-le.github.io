@@ -38,7 +38,9 @@ const App = () => {
       <div
         className={`title ${currentView === 'home' ? 'title-large' : 'title-small'}`}
         onClick={() => currentView !== 'home' && handleClick('home')}
-        style={currentView === 'home' ? {width: 800, height: 300} : {width: 'auto', height: 'auto'}}
+        style={currentView === 'home' ? 
+          {width: '100%', maxWidth: 800, height: 200} : 
+          {width: 'auto', height: 'auto'}}
       >
         {currentView === 'home' ? (
           <ASCIIText
