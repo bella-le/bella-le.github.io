@@ -1,15 +1,31 @@
-export const Resume = () => (
-  <div className="card" style={{maxWidth: '90vw', width: '1200px'}}>
-    <div className="flex justify-between items-center mb-4">
-      <h2 className="title title-small">Resume</h2>
-      <a href="/img/Bella_Le_Resume.pdf" download className="button">
-        Download PDF
-      </a>
+import { useState } from 'react';
+
+export const Resume = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className="card" style={{maxWidth: '90vw', width: '1200px'}}>
+      <div className="resume-header">
+        <h2 className="section-heading mb-0">resume 📄</h2>
+        <div className="resume-buttons">
+          <button 
+            onClick={() => setIsOpen(!isOpen)} 
+            className="button"
+          >
+            {isOpen ? 'close' : 'view'}
+          </button>
+          <a href="/img/Bella_Le_Resume.pdf" download className="button">
+            pdf download
+          </a>
+        </div>
+      </div>
+      {isOpen && (
+        <iframe
+          src="/img/Bella_Le_Resume.pdf"
+          className="iframe"
+          title="Resume PDF"
+        />
+      )}
     </div>
-    <iframe
-      src="/img/Bella_Le_Resume.pdf"
-      className="iframe"
-      title="Resume PDF"
-    />
-  </div>
-);
+  );
+};

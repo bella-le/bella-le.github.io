@@ -268,7 +268,7 @@ class CanvAscii {
       1,
       1000,
     );
-    this.camera.position.z = 30;
+    this.camera.position.z = 15; // Reduced from 30 to bring text closer
 
     this.scene = new THREE.Scene();
     this.mouse = { x: 0, y: 0 };
@@ -447,6 +447,9 @@ export default function ASCIIText({
         position: "relative",
         width: "100%",
         height: "100%",
+        minHeight: "80px", // Add minimum height to prevent collapse
+        transform: "scale(0.8)", // Scale down the entire component
+        transformOrigin: "center center"
       }}
     >
       {/* Inline style or move to global CSS */}

@@ -34,13 +34,11 @@ const App = () => {
   return (
     <div className="container">
       <div
-        className={`title ${currentView === 'home' ? 'title-large' : 'title-small'} 
-   w-[300px] h-[150px] md:w-[800px] md:h-[300px] -mt-48 md:-mt-64`}
+        className={`title ${currentView === 'home' ? 'title-large' : 'title-small'} w-[300px] h-[200px] md:w-[800px] md:h-[200px]`}
         onClick={() => currentView !== 'home' && handleClick('home')}
-        // style={{ height: '300px', width: '800px' }}
-        >
+      >
         <ASCIIText
-          text='bella le'
+          text='bella'
           textFontSize={40}
           enableWaves={true}
         />
