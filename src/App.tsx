@@ -18,6 +18,11 @@ const App = () => {
       return;
     }
     
+    // If clicking the current view, go back to home
+    if (view === currentView) {
+      view = 'home';
+    }
+    
     // Only trigger title transition when switching to/from home
     if (currentView === 'home' || view === 'home') {
       setIsTitleTransitioning(true);
@@ -62,7 +67,8 @@ const App = () => {
             enableWaves={true}
           />
         ) : (
-          <h1 className="text-4xl font-bold text-center text-[#d692a3]">bella</h1>
+          // <h1 className="text-4xl font-bold text-center text-[#d692a3]">bella</h1>
+          ''
         )}
       </div>      
       <div className={`content ${isContentTransitioning ? 'content-transitioning' : ''}`}>

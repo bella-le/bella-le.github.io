@@ -71,6 +71,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .content-transitioning {
@@ -110,7 +111,17 @@ a {
   display: flex;
   gap: 0.5rem;
   justify-content: center;
+  position: absolute;
+  top: 2rem;
   transition: opacity 300ms ease-in-out;
+}
+
+.nav-home {
+  top: 2rem;
+}
+
+.nav-cards {
+  top: 6rem;
 }
 
 .nav-link {
