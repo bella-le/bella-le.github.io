@@ -149,6 +149,7 @@ a {
   padding: 0.4rem .70rem;
   border-radius: 9999px;
   font-size: 0.875rem;
+  font-style: italic;
   display: inline-block;
   transition: background-color 0.3s ease;
 }
