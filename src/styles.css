@@ -145,23 +145,21 @@ a {
 }
 
 .nav-link {
-  font-style: italic;
-  font-family: 'Victor Mono', monospace;
-  /* background: white; */
-  border: none;
   color: #d692a3;
-  cursor: pointer;
-  transform: scale(1);
-  transition: all 300ms ease-in-out;
   padding: 0.4rem .70rem;
   border-radius: 9999px;
   font-size: 0.875rem;
+  display: inline-block;
 }
 
+.nav-link:nth-child(1) { transform: rotate(-5deg); }
+.nav-link:nth-child(2) { transform: rotate(3deg); }
+.nav-link:nth-child(3) { transform: rotate(-3deg); }
+.nav-link:nth-child(4) { transform: rotate(5deg); }
+.nav-link:nth-child(5) { transform: rotate(-2deg); }
+
 .nav-link:hover {
-  transform: translateY(-2px);
   text-decoration: underline;
-  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
 }
 
 .nav-link-active {

@@ -59,7 +59,7 @@ export const Works = () => (
 
     <WorkItem
       company="quora"
-      role="software engineer, feed"
+      role="software engineer, home feed & notifs"
       location="mountain view"
       description="lead on home feed and iterated on home feed engagement, responsible for reliability and speed metrics"
     />
@@ -75,10 +75,24 @@ export const Works = () => (
       company="amazon"
       role="sde intern, aaa"
       location="seattle"
-      description="facilitated the migration of internal data with realtime updates, improved data update latency from a 24-hour batch job to a consistent 10 minute stream of data"
+      description="internal data pipeline work"
     />
 
-    <h3 className="work-heading">cute fun things</h3>
+    <h3 className="work-heading">schooling</h3>
+    <WorkItem
+      company="uc san diego"
+      role="computer science, b.s."
+      location="2016 - 2020"
+      description="cum laude, minor in cognitive science. chancellor's scholar. tutored for CSE 101: algorithms and data structures. gremlin in the labs"
+    />
+    <WorkItem
+      company="john c. kimball high school"
+      role="high school diploma"
+      location="2012 - 2016"
+      description="valedictorian. oh tracy, I will never ever miss you."
+    />
+
+    <h3 className="work-heading">cute fun unserious things</h3>
     <WorkItem
       company="fridge magnets"
       role="2025"

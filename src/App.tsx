@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BrowserRouter as Router, useLocation, useNavigate } from 'react-router-dom';
 import { Nav } from './components/Nav.tsx';
 import { About } from './components/About.tsx';
 import { Contact } from './components/Contact.tsx';
@@ -8,12 +9,14 @@ import ASCIIText from './components/blocks/TextAnimations/ASCIIText/ASCIIText.js
 import { Things } from './components/Things.tsx';
 import { Now } from './components/Now.tsx';
 
-const App = () => {
-  const [currentView, setCurrentView] = useState('home');
+const AppContent = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
   const [isTitleTransitioning, setIsTitleTransitioning] = useState(false);
   const [isContentTransitioning, setIsContentTransitioning] = useState(false);
+  const currentView = location.pathname.slice(1) || 'home';
 
-  const handleClick = (view: string) => {
+  const handleNavigation = (view: string) => {
     if (view === 'blog') {
       window.location.href = 'https://blog.bella-le.com';
       return;
@@ -35,7 +38,7 @@ const App = () => {
     // Always trigger content transition
     setIsContentTransitioning(true);
     setTimeout(() => {
-      setCurrentView(view);
+      navigate(view === 'home' ? '/' : `/${view}`);
       setIsContentTransitioning(false);
     }, 300);
   };
@@ -57,7 +60,7 @@ const App = () => {
         className={`title ${currentView === 'home' ? 'title-large' : 'title-small'} ${
           isTitleTransitioning ? 'title-fade-up' : ''
         }`}
-        onClick={() => currentView !== 'home' && handleClick('home')}
+        onClick={() => currentView !== 'home' && handleNavigation('home')}
         style={currentView === 'home' ? 
           {width: '100%', maxWidth: 800, height: 200} : 
           {width: 'auto', height: 'auto'}}
@@ -69,7 +72,6 @@ const App = () => {
             enableWaves={true}
           />
         ) : (
-          // <h1 className="text-4xl font-bold text-center text-[#d692a3]">bella</h1>
           ''
         )}
       </div>      
@@ -77,8 +79,16 @@ const App = () => {
         {currentView !== 'home' && getContent()}
       </div>
 
-      <Nav currentView={currentView} handleClick={handleClick} />
+      <Nav currentView={currentView} handleClick={handleNavigation} />
     </div>
+  );
+};
+
+const App = () => {
+  return (
+    <Router>
+      <AppContent />
+    </Router>
   );
 };
 
