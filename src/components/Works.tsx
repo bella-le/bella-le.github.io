@@ -1,42 +1,5 @@
-interface WorkItemProps {
-  company: string;
-  role: string;
-  location: string;
-  description: string;
-  links?: Array<{
-    text: string;
-    url: string;
-  }>;
-}
-
-const WorkItem = ({ company, role, location, description, links }: WorkItemProps) => (
-  <div className="mb-6 bg-[#fcf0f3] p-4 rounded-lg">
-    <div className="flex flex-wrap items-baseline gap-2 mb-2">
-      <h3 className="text-[#d692a3] font-bold">{company}</h3>
-      {/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
-      <span className="text-gray-500 italic">// {role}{location && ", "}{location}</span>
-    </div>
-    <p className="mb-2">{description}</p>
-    {links && links.length > 0 && (
-      <div className="text-xs text-gray-500">
-        [ {links.map((link, index) => (
-          <>
-            <a 
-              key={link.url}
-              href={link.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-[#d692a3] hover:underline"
-            >
-              {link.text}
-            </a>
-            {index < links.length - 1 && ", "}
-          </>
-        ))} ]
-      </div>
-    )}
-  </div>
-);
+import React from 'react';
+import WorkItem from "./WorkItem.tsx";
 
 export const Works = () => (
   <div className="card">
@@ -47,7 +10,13 @@ export const Works = () => (
       company="netflix"
       role="software engineer, games platform reliability"
       location="los gatos"
-      description="working on observability"
+      description="working on observability."
+      links={[
+        {
+          text: "website",
+          url: "https://netflix.com/",
+        }
+      ]}
     />
 
     <WorkItem
@@ -55,41 +24,65 @@ export const Works = () => (
       role="software engineer, billing"
       location="sunnyvale"
       description="built a pipeline for LinkedIn's threshold-based billing system"
+      links={[
+        {
+          text: "website",
+          url: "https://linkedin.com/",
+        }
+      ]}
     />
 
     <WorkItem
       company="quora"
       role="software engineer, home feed & notifs"
       location="mountain view"
-      description="lead on home feed and iterated on home feed engagement, responsible for reliability and speed metrics"
+      description="tech lead on home feed and iterated on home feed engagement; was responsible for reliability and speed metrics. implemented a new type of logging for engagement"
+      links={[
+        {
+          text: "website",
+          url: "https://quora.com/",
+        }
+      ]}
     />
 
     <WorkItem
       company="amazon"
       role="sde intern, management as a service"
       location="nyc"
-      description="built frontend components for amazon ads"
+      description="built frontend components for amazon ads b2b. xi'an famous foods changed my life"
+      links={[
+        {
+          text: "website",
+          url: "https://amazon.com/",
+        }
+      ]}
     />
 
     <WorkItem
       company="amazon"
       role="sde intern, aaa"
       location="seattle"
-      description="internal data pipeline work"
+      description="internal data pipeline work, ate a lot of bananas, and kayaked."
+      links={[
+        {
+          text: "website",
+          url: "https://amazon.com/",
+        }
+      ]}
     />
 
     <h3 className="work-heading">schooling</h3>
     <WorkItem
       company="uc san diego"
       role="computer science, b.s."
-      location="2016 - 2020"
+      location="2016-2020"
       description="cum laude, minor in cognitive science. chancellor's scholar. tutored for CSE 101: algorithms and data structures. gremlin in the labs"
-    />
-    <WorkItem
-      company="john c. kimball high school"
-      role="high school diploma"
-      location="2012 - 2016"
-      description="valedictorian. oh tracy, I will never ever miss you."
+      links={[
+        {
+          text: "website",
+          url: "https://ucsd.edu/",
+        }
+      ]}
     />
 
     <h3 className="work-heading">cute fun unserious things</h3>
@@ -125,6 +118,26 @@ export const Works = () => (
       ]}
     />
 
-    <p className="subtle-text">last updated 01-26-25. built with 💞 with react and tailwind</p>
+    <WorkItem
+      company="bella-le.com"
+      role="this website"
+      description="built with 💞 with react and tailwind. animated UI components from reactbits.dev. font is Victor Mono, aka my favorite font in the world"
+      links={[
+        {
+          text: "website",
+          url: "https://bella-le.github.io/scoopology/",
+        },
+        {
+          text: "github",
+          url: "https://github.com/bella-le/scoopology",
+        },
+        {
+          text: "reactbits.dev",
+          url: "https://www.reactbits.dev/",
+        },
+      ]}
+    />
+
+    <p className="subtle-text">last updated 01-26-25.</p>
   </div>
 );

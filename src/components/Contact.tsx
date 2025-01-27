@@ -1,5 +1,6 @@
 import { MdEmail } from 'react-icons/md';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { FaBluesky } from "react-icons/fa6";
 import { HiOutlineDocument } from 'react-icons/hi';
 
 export const Contact = () => (
@@ -31,6 +32,33 @@ export const Contact = () => (
       >
         <FaLinkedin size={24} />
       </a>
+      <a 
+        href="https://bsky.app/profile/bella-le.com" 
+        target="_blank"
+        rel="noopener noreferrer"
+        className="social-icon"
+        aria-label="Bluesky"
+      >
+        <FaBluesky size={24} />
+      </a>
+      {/* <a 
+        href="https://open.spotify.com/playlist/7soQr84csviemFMXQO55qS?si=b147b51e77ec41ac" 
+        target="_blank"
+        rel="noopener noreferrer"
+        className="social-icon"
+        aria-label="Spotify"
+      >
+        <FaSpotify size={24} />
+      </a> */}
+      {/* <a 
+        href="https://www.instagram.com/bhl.bel/" 
+        target="_blank"
+        rel="noopener noreferrer"
+        className="social-icon"
+        aria-label="Instagram"
+      >
+        <FaInstagram size={24} />
+      </a> */}
       <a 
         href="/img/Bella_Le_Resume.pdf" 
         target="_blank"

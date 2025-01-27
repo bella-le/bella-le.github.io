@@ -107,7 +107,9 @@ a {
 
 .card ul {
   list-style: none;
-  padding-left: 1.5rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .card ul li {
@@ -257,7 +259,7 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
   gap: 1rem;
   width: 100%;
-  max-width: 300px;
+  /* max-width: 300px; */
   margin: 1.5rem auto 0;
 }
 

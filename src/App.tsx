@@ -17,7 +17,7 @@ const AppContent = () => {
   const currentView = location.pathname.slice(1) || 'home';
 
   const handleNavigation = (view: string) => {
-    if (view === 'blog') {
+    if (view === 'words') {
       window.location.href = 'https://blog.bella-le.com';
       return;
     }
