@@ -150,6 +150,7 @@ a {
   border-radius: 9999px;
   font-size: 0.875rem;
   display: inline-block;
+  transition: background-color 0.3s ease;
 }
 
 .nav-link:nth-child(1) { transform: rotate(-5deg); }
