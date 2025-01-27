@@ -2,6 +2,8 @@ export const Now = () => (
   <div className="card">
     <h2 className="section-heading">now</h2>
     <div>
+      <h3 className="work-heading">where to find me</h3>
+      <p>living in Hayes Valley, SF with Armin & Io.</p>
       <h3 className="work-heading">what i'm up to right now</h3>
       <ul>
         <li>improv lessons at <a href="https://leela-sf.com/" className='email'>Leela</a></li>

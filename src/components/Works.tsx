@@ -111,6 +111,6 @@ export const Works = () => (
       ]}
     />
 
-    <p className="subtle-text">this website was built with 💞 with react and tailwind</p>
+    <p className="subtle-text">last updated 01-26-25. built with 💞 with react and tailwind</p>
   </div>
 );
