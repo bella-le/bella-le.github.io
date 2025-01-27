@@ -37,7 +37,7 @@ export const Now = () => (
         description="working on observability. falling asleep every time I go up and down the shuttle"
       />
       <p className="subtle-text">
-        last updated 01-26-25. this is page is a <a href="https://nownownow.com/about">now</a> page!
+        last updated 01-26-25. this is a <a href="https://nownownow.com/about">now</a> page!
       </p>
     </div>
   </div>
