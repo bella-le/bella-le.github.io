@@ -13,6 +13,7 @@ const WorkItem = ({ company, role, location, description, links }: WorkItemProps
   <div className="mb-6 bg-[#fcf0f3] p-4 rounded-lg">
     <div className="flex flex-wrap items-baseline gap-2 mb-2">
       <h3 className="text-[#d692a3] font-bold">{company}</h3>
+      {/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
       <span className="text-gray-500 italic">// {role}{location && ", "}{location}</span>
     </div>
     <p className="mb-2">{description}</p>
