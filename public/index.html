@@ -7,7 +7,7 @@
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
-      content="Web site created using create-react-app"
+      content="hey hi i'm bella le"
     />
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,6 +28,23 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <title>bella le</title>
+    <script>
+      // Handle GitHub Pages SPA routing
+      (function() {
+        const redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+        
+        // Handle 404 redirects
+        const searchParams = new URLSearchParams(window.location.search);
+        const redirectPath = searchParams.get('p');
+        if (redirectPath) {
+          history.replaceState(null, null, '/' + redirectPath);
+        }
+      })();
+    </script>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

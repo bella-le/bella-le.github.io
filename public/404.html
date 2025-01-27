@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <script>
+      // Get the current path and search parameters
+      const path = window.location.pathname;
+      const search = window.location.search;
+      
+      // Remove leading and trailing slashes
+      const cleanPath = path.replace(/^\/+|\/+$/g, '');
+      
+      // Redirect to the main page with the path as a parameter
+      window.location.replace(
+        '/' + 
+        (cleanPath ? '?p=' + encodeURIComponent(cleanPath) : '') +
+        (search ? '&' + search.slice(1) : '')
+      );
+    </script>
+  </head>
+  <body>
+    Redirecting...
+  </body>
+</html>
