@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import { Nav } from './components/Nav.tsx';
 import { About } from './components/About.tsx';
 import { Contact } from './components/Contact.tsx';
-import { Resume } from './components/Resume.tsx';
+import { Works } from './components/Works.tsx';
 import './styles.css';
 import ASCIIText from './components/blocks/TextAnimations/ASCIIText/ASCIIText.jsx';
 import { Things } from './components/Things.tsx';
+import { Now } from './components/Now.tsx';
 
 const App = () => {
   const [currentView, setCurrentView] = useState('home');
@@ -42,9 +43,10 @@ const App = () => {
   const getContent = () => {
     switch(currentView) {
       case 'about': return <About />;
-      case 'resume': return <Resume />;
+      case 'now': return <Now />;
       case 'contact': return <Contact />;
       case 'toybox': return <Things />;
+      case 'works': return <Works />;
       default: return null;
     }
   };

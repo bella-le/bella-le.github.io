@@ -1,28 +1,44 @@
+import { MdEmail } from 'react-icons/md';
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { HiOutlineDocument } from 'react-icons/hi';
+
 export const Contact = () => (
   <div className="card">
     <h2 className="section-heading">contact 📞</h2>
-    <div className="contact-buttons">
+    <div className="social-icons">
       <a 
         href="mailto:hello@bella-le.com" 
-        className="contact-button"
+        className="social-icon"
+        aria-label="Email"
       >
-        email
+        <MdEmail size={24} />
       </a>
       <a 
         href="https://github.com/bella-le" 
         target="_blank" 
         rel="noopener noreferrer"
-        className="contact-button"
+        className="social-icon"
+        aria-label="GitHub"
       >
-        github
+        <FaGithub size={24} />
       </a>
       <a 
         href="https://linkedin.com/in/bella-le" 
         target="_blank" 
         rel="noopener noreferrer"
-        className="contact-button"
+        className="social-icon"
+        aria-label="LinkedIn"
       >
-        linkedin
+        <FaLinkedin size={24} />
+      </a>
+      <a 
+        href="/img/Bella_Le_Resume.pdf" 
+        target="_blank"
+        rel="noopener noreferrer"
+        className="social-icon"
+        aria-label="Resume"
+      >
+        <HiOutlineDocument size={24} />
       </a>
     </div>
   </div>
