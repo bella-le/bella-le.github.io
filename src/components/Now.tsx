@@ -18,6 +18,16 @@ export const Now = () => (
         <li>putting more matcha and miso to everything I bake because why not</li>
         <li>not even eating out because San Francisco is too expensive</li>
         <li>🐐 ???</li>
+        <li>not playing very many games right now :-)</li>
+      </ul>
+      <h3 className="work-heading">media</h3>
+      <ul>
+        <li>manga: <a href="https://www.viz.com/shonenjump/chapters/dandadan" className="email">
+        dandadan</a>, <a href="https://www.viz.com/vizmanga/chapters/frieren-the-journeys-end" className="email">
+        frieren</a>, <a href="https://www.viz.com/shonenjump/chapters/spy-x-family" className="email">
+        spy x family</a></li>
+        <li>literature: <a href="https://www.goodreads.com/book/show/4929.Kafka_on_the_Shore" className="email">
+        kafka on the shore by haruki narukami</a></li>
       </ul>
       <h3 className="work-heading">current employment</h3>
       <WorkItem
@@ -25,12 +35,6 @@ export const Now = () => (
         role="software engineer"
         location="los gatos"
         description="working on observability. falling asleep every time I go up and down the shuttle"
-        links={[
-          {
-            text: "website",
-            url: "https://netflix.com/",
-          }
-        ]}
       />
       <p className="subtle-text">
         last updated 01-26-25. this is page is a <a href="https://nownownow.com/about">now</a> page!

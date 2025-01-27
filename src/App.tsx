@@ -70,6 +70,7 @@ const AppContent = () => {
             text='bella'
             textFontSize={40}
             enableWaves={true}
+            // textColor='#b8d5e7'
           />
         ) : (
           ''

@@ -10,7 +10,7 @@ export const Works = () => (
       company="netflix"
       role="software engineer, games platform reliability"
       location="los gatos"
-      description="working on observability."
+      description="currently working on observability"
       links={[
         {
           text: "website",
