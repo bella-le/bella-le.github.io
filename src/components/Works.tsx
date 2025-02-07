@@ -87,6 +87,22 @@ export const Works = () => (
 
     <h3 className="work-heading">cute fun unserious things</h3>
     <WorkItem
+      company="champagne vs code theme"
+      role="2025"
+      description="we need more pink themes in the world"
+      links={[
+        {
+          text: "website",
+          url: "https://marketplace.visualstudio.com/items?itemName=bella-le.champagne",
+        },
+        {
+          text: "github",
+          url: "https://github.com/bella-le/champagne-vscode",
+        }
+      ]}
+    />
+
+    <WorkItem
       company="fridge magnets"
       role="2025"
       description="you find a cute little fridge on the internet"
@@ -125,11 +141,11 @@ export const Works = () => (
       links={[
         {
           text: "website",
-          url: "https://bella-le.github.io/scoopology/",
+          url: "https://bella-le.com/",
         },
         {
           text: "github",
-          url: "https://github.com/bella-le/scoopology",
+          url: "https://github.com/bella-le/bella-le.github.io",
         },
         {
           text: "reactbits.dev",
@@ -138,6 +154,6 @@ export const Works = () => (
       ]}
     />
 
-    <p className="subtle-text">last updated 01-26-25.</p>
+    <p className="subtle-text">last updated 02-07-25.</p>
   </div>
 );
