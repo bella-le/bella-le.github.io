@@ -18,9 +18,9 @@ export const Now = () => (
         <li>putting more matcha and miso to everything I bake because why not</li>
         <li>not even eating out because San Francisco is too expensive</li>
         <li>🐐 ???</li>
-        <li>not playing very many games right now :-)</li>
+        <li>exploring intentions, sponteneity, and playfulness in socializing and making friends</li>
       </ul>
-      <h3 className="work-heading">media</h3>
+      <h3 className="work-heading">current media</h3>
       <ul>
         <li>manga: <a href="https://www.viz.com/shonenjump/chapters/dandadan" className="email">
         dandadan</a>, <a href="https://www.viz.com/vizmanga/chapters/frieren-the-journeys-end" className="email">
@@ -37,7 +37,7 @@ export const Now = () => (
         description="working on observability. falling asleep every time I go up and down the shuttle"
       />
       <p className="subtle-text">
-        last updated 01-26-25. this is a <a href="https://nownownow.com/about">now</a> page!
+        last updated 02-11-25. this is a <a href="https://nownownow.com/about">now</a> page!
       </p>
     </div>
   </div>
