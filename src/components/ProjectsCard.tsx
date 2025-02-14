@@ -7,6 +7,7 @@ interface Project {
   title: string;
   description: string;
   image: string;
+  links: Record<string, string>;
 }
 
 const ProjectsCard = () => {
@@ -15,21 +16,33 @@ const ProjectsCard = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "Project 1",
-      description: "A cool project with a longer description .",
-      image: "/api/placeholder/800/400"
+      title: "champagne vs code theme",
+      description: "we need more pink IDE themes.",
+      image: "/img/projects/champagne.png",
+      links: {
+        "github": "https://github.com/bella-le/champagne-theme",
+        "marketplace": "https://marketplace.visualstudio.com/items?itemName=bella-le.champagne"
+      }
     },
     {
       id: 2,
-      title: "Project 2",
-      description: "Another amazing project that demonstrates technical skills and problem-solving abilities. This project uses cutting-edge technologies and follows best practices in software development.",
-      image: "/api/placeholder/800/400"
+      title: "fridge magnets",
+      description: "you find a cute little fridge on the internet.",
+      image: "/img/projects/fridge-magnets.png",
+      links: {
+        "github": "https://github.com/bella-le/fridge-magnets",
+        "demo": "https://fridge-magnets-production.up.railway.app/"
+      }
     },
     {
       id: 3,
-      title: "Project 3",
-      description: "Something awesome that pushes the boundaries of what's possible. This project combines innovative features with a user-friendly interface to create a unique and engaging experience.",
-      image: "/api/placeholder/800/400"
+      title: "scoopology",
+      description: "the cutest ice cream personality quiz!",
+      image: "/img/projects/scoopology.webp",
+      links: {
+        "github": "https://github.com/bella-le/scoopology",
+        "demo": "https://bella-le.github.io/scoopology"
+      }
     }
   ];
 
@@ -49,9 +62,9 @@ const ProjectsCard = () => {
   };
 
   return (
-    <BentoCard colSpan={2} rowSpan={2} gradient className="relative overflow-hidden">
+    <BentoCard colSpan={2} rowSpan={2} className="relative overflow-hidden bg-gradient-to-br from-custom-rose-light/30 to-custom-purple/20 backdrop-blur-sm">
       <div className="absolute inset-0 p-6 flex flex-col">
-        <h3 className="font-medium text-xl mb-6">Featured Projects</h3>
+        <h3 className="font-medium text-lg mb-6 italic">cute unserious projects</h3>
         <div className="relative flex-grow overflow-hidden rounded-xl">
           <div 
             className="absolute inset-0 transition-transform duration-500 ease-in-out"
@@ -63,16 +76,33 @@ const ProjectsCard = () => {
                   key={project.id}
                   className="w-full h-full flex-shrink-0 px-1"
                 >
-                  <div className="bg-white/50 backdrop-blur-sm rounded-xl p-6 h-full flex flex-col">
-                    <div className="relative h-52 mb-6">
+                  <div className="bg-custom-rose-light/30 backdrop-blur-sm rounded-xl p-6 h-full flex flex-col">
+                    <div className="relative mb-6 w-full aspect-[16/9] flex items-center justify-center overflow-hidden rounded-lg">
                       <img 
                         src={project.image} 
                         alt={project.title}
-                        className="absolute inset-0 w-full h-full object-cover rounded-lg"
-                      />
+                        className="absolute w-full h-full object-cover opacity-80 mix-blend-overlay"
+                        />
                     </div>
-                    <h4 className="font-medium text-xl mb-3">{project.title}</h4>
-                    <p className="text-base text-gray-600 leading-relaxed">{project.description}</p>
+                    <h4 className="font-medium text-sm mb-3 italic">{project.title}</h4>
+                    <p className="text-xs text-gray-600 leading-relaxed mb-4">{project.description}</p>
+                    <div className="flex items-center gap-2 mt-auto text-sm">
+                      {Object.entries(project.links).map(([name, url], index) => (
+                        <React.Fragment key={name}>
+                          <a
+                            href={url}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-2 py-0.5 rounded-full bg-custom-rose-light/10 text-custom-rose-light/90 hover:bg-custom-rose-light/20 transition-colors text-xs"
+                          >
+                            {name}
+                          </a>
+                          {/* {index < Object.entries(project.links).length - 1 && (
+                            <span className="text-gray-500">✦</span>
+                          )} */}
+                        </React.Fragment>
+                      ))}
+                    </div>
                   </div>
                 </div>
               ))}

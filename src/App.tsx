@@ -5,13 +5,17 @@ import NowPlayingCard from './components/NowPlayingCard.tsx';
 import ProjectsCard from './components/ProjectsCard.tsx';
 import styles from './components/BentoGrid.module.css';
 import SocialsCard from './components/SocialsCard.tsx';
+import BlogCard from './components/BlogCard.tsx';
+import NowCard from './components/NowCard.tsx';
 
 const BentoPortfolio = () => {
   return (
-    <div className="max-w-[900px] mx-auto px-4 py-6 min-h-screen">
+    <div className="max-w-[900px] mx-auto px-4 py-6 min-h-screen backdrop-blur-sm">
       {/* Logo */}
-      <div className="text-2xl font-bold bg-gradient-to-r from-pink-400 to-purple-500 bg-clip-text text-transparent mb-6">
-        yourname
+      <div className="flex mb-6 pl-4">
+        <div className="text-2xl font-bold font-sans bg-gradient-to-r from-custom-rose via-custom-purple to-custom-blue bg-clip-text text-transparent shine-effect px-2">
+          bella ✨
+        </div>
       </div>
 
       {/* Bento Grid Layout */}
@@ -19,8 +23,10 @@ const BentoPortfolio = () => {
         <IntroCard />
         <LocationCard />
         <NowPlayingCard />
-        <SocialsCard />
+        <NowCard />
         <ProjectsCard />
+        <BlogCard />
+        <SocialsCard />
       </div>
     </div>
   );

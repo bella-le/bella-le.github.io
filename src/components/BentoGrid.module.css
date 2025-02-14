@@ -6,15 +6,17 @@
 .bentoGrid {
   position: relative;
   margin: 0 auto;
-  width: var(--grid-width);
-  display: flex;
-  flex-wrap: wrap;
+  width: 100%;
+  max-width: var(--grid-width);
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
   transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .bentoGrid > * {
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
 }
 
 /* Medium screens - 3 cards */
@@ -23,6 +25,9 @@
     --card-size: 200px;
     --grid-width: calc(var(--card-size) * 3 + 2rem);
   }
+  .bentoGrid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }
 
 /* Large screens - 4 cards */
@@ -30,5 +35,8 @@
   :root {
     --card-size: 200px;
     --grid-width: calc(var(--card-size) * 4 + 3rem);
+  }
+  .bentoGrid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
   }
 }

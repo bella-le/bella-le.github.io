@@ -10,36 +10,36 @@ const SocialsCard = () => {
       icon: <FontAwesomeIcon icon={faEnvelope} size="lg" />,
       href: 'mailto:hello@bella-le.com',
       label: 'Email',
-      color: 'text-red-400 hover:text-red-500'
+      color: 'text-custom-rose hover:text-custom-rose-light'
     },
     {
       icon: <FontAwesomeIcon icon={faGithub} size="lg" />,
       href: 'https://github.com/bella-le',
       label: 'GitHub',
-      color: 'text-gray-600 hover:text-gray-800'
+      color: 'text-custom-purple hover:text-custom-purple/80'
     },
     {
       icon: <FontAwesomeIcon icon={faLinkedin} size="lg" />,
       href: 'https://linkedin.com/in/bella-le',
       label: 'LinkedIn',
-      color: 'text-blue-500 hover:text-blue-600'
+      color: 'text-custom-blue hover:text-custom-blue/80'
     },
     {
       icon: <FontAwesomeIcon icon={faInstagram} size="lg" />,
       href: 'https://instagram.com/bhl.bel',
       label: 'Instagram',
-      color: 'text-pink-500 hover:text-pink-600'
+      color: 'text-custom-rose hover:text-custom-rose-light'
     },
     {
       icon: <FontAwesomeIcon icon={faFileLines} size="lg" />,
       href: '/img/Bella_Le_Resume.pdf',
       label: 'Resume',
-      color: 'text-purple-500 hover:text-purple-600'
+      color: 'text-custom-blue hover:text-custom-blue/80'
     }
   ];
 
   return (
-    <BentoCard colSpan={2} className="bg-white p-4">
+    <BentoCard colSpan={2} className="bg-custom-rose-light/20 backdrop-blur-sm p-4">
       <div className="flex flex-wrap gap-8 items-center justify-center h-full">
         {socials.map((social) => (
           <a

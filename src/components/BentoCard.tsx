@@ -18,17 +18,16 @@ const BentoCard: React.FC<BentoCardProps> = ({
   externalLink,
   gradient = false,
 }) => {
-  const baseClasses = 'rounded-3xl p-6 shadow-sm transition-all duration-500 ease-in-out';
+  const baseClasses = 'rounded-3xl p-6 shadow-sm transition-transform duration-500';
   const gradientClasses = gradient ? 'bg-gradient-to-br from-purple-100 to-pink-100' : 'bg-white';
   
   return (
     <div 
       className={`${baseClasses} ${gradientClasses} ${className}`}
       style={{ 
-        width: colSpan > 1 ? `calc(var(--card-size) * ${colSpan} + ${colSpan - 1}rem)` : 'var(--card-size)',
-        height: rowSpan > 1 ? `calc(var(--card-size) * ${rowSpan} + ${rowSpan - 1}rem)` : 'var(--card-size)',
-        flexShrink: 0,
-        flexGrow: 0
+        gridColumn: `span ${colSpan}`,
+        gridRow: `span ${rowSpan}`,
+        height: rowSpan > 1 ? `calc(var(--card-size) * ${rowSpan} + ${rowSpan - 1}rem)` : 'var(--card-size)'
       }}
     >
       {children}
