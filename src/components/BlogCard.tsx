@@ -15,7 +15,7 @@ const BlogCard = () => {
           <h2 className="text-sm font-medium group-hover:text-custom-rose-light transition-colors italic">
             i went to a large-group gathering and i DIDN'T want to wallow in a corner
           </h2>
-          <ArrowUpRight className="w-6 h-6 text-custom-rose-light opacity-0 group-hover:opacity-100 transition-opacity" />
+          <ArrowUpRight className="w-6 h-6 text-custom-rose-light" />
         </div>
         
         <p className="text-xs text-gray-600 mb-4 flex-grow">

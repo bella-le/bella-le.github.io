@@ -76,7 +76,7 @@ const ProjectsCard = () => {
                   key={project.id}
                   className="w-full h-full flex-shrink-0 px-1"
                 >
-                  <div className="bg-custom-rose-light/30 backdrop-blur-sm rounded-xl p-6 h-full flex flex-col">
+                  <div className="bg-custom-rose-light/20 backdrop-blur-sm rounded-xl p-6 h-full flex flex-col">
                     <div className="relative mb-6 w-full aspect-[16/9] flex items-center justify-center overflow-hidden rounded-lg">
                       <img 
                         src={project.image} 
@@ -93,7 +93,7 @@ const ProjectsCard = () => {
                             href={url}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="px-2 py-0.5 rounded-full bg-custom-rose-light/10 text-custom-rose-light/90 hover:bg-custom-rose-light/20 transition-colors text-xs"
+                            className="px-2 py-0.5 rounded-full bg-custom-rose-light/10 text-custom-rose-light/100 hover:bg-custom-rose-light/20 transition-colors text-xs"
                           >
                             {name}
                           </a>

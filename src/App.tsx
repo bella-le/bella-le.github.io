@@ -7,6 +7,8 @@ import styles from './components/BentoGrid.module.css';
 import SocialsCard from './components/SocialsCard.tsx';
 import BlogCard from './components/BlogCard.tsx';
 import NowCard from './components/NowCard.tsx';
+import CalendlyCard from './components/CalendlyCard.tsx';
+import PhotoCard from './components/PhotoCard.tsx';
 
 const BentoPortfolio = () => {
   return (
@@ -25,6 +27,8 @@ const BentoPortfolio = () => {
         <NowPlayingCard />
         <NowCard />
         <ProjectsCard />
+        <PhotoCard />
+        <CalendlyCard />
         <BlogCard />
         <SocialsCard />
       </div>

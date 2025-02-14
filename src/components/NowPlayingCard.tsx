@@ -71,11 +71,11 @@ const NowPlayingCard = () => {
           <div className="flex flex-col gap-2">
             <Equalizer />
             <div className="flex items-start justify-between w-full">
-              <div className="transition-colors">
-                <h3 className="text-sm font-medium mb-1 group-hover:text-custom-green">{currentSong.title}</h3>
-                <p className="text-xs text-gray-600 italic group-hover:text-custom-green/80">{currentSong.artist}</p>
+              <div className="transition-all duration-300 ease-in-out">
+                <h3 className="text-sm font-medium mb-1 transition-all duration-300 ease-in-out group-hover:text-custom-green/100">{currentSong.title}</h3>
+                <p className="text-xs text-gray-600 italic transition-all duration-300 ease-in-out group-hover:text-custom-green/90">{currentSong.artist}</p>
               </div>
-              <ArrowUpRight className="w-4 h-4 text-custom-green opacity-0 group-hover:opacity-100 transition-opacity" />
+              <ArrowUpRight className="w-4 h-4 text-custom-green" />
             </div>
           </div>
         </a>

@@ -112,10 +112,10 @@ const NowCard = () => {
                   rel="noopener noreferrer"
                   className="group flex items-start justify-between gap-2 flex-grow"
                 >
-                  <div className="text-sm group-hover:text-custom-purple transition-colors">
+                  <div className="text-sm transition-all duration-300 ease-in-out group-hover:text-custom-purple/100">
                     {currentItem.text}
                   </div>
-                  <ArrowUpRight className="w-4 h-4 text-custom-purple/60 flex-shrink-0" />
+                  <ArrowUpRight className="w-4 h-4 text-custom-purple/60 flex-shrink-0 transition-all duration-300 ease-in-out group-hover:text-custom-purple/100" />
                 </a>
               ) : (
                 <div className="text-sm">
