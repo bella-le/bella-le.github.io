@@ -1,5 +1,5 @@
 :root {
-  --card-size: min(calc((100vw - 3rem) / 2), 200px);
+  --card-size: min((100vw - 3rem) / 2, 200px);
   --grid-width: calc(var(--card-size) * 2 + 1rem);
 }
 
