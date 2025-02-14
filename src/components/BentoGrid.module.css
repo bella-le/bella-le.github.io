@@ -1,0 +1,34 @@
+:root {
+  --card-size: min(calc((100vw - 3rem) / 2), 200px);
+  --grid-width: calc(var(--card-size) * 2 + 1rem);
+}
+
+.bentoGrid {
+  position: relative;
+  margin: 0 auto;
+  width: var(--grid-width);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.bentoGrid > * {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Medium screens - 3 cards */
+@media (min-width: 650px) and (max-width: 849px) {
+  :root {
+    --card-size: 200px;
+    --grid-width: calc(var(--card-size) * 3 + 2rem);
+  }
+}
+
+/* Large screens - 4 cards */
+@media (min-width: 850px) {
+  :root {
+    --card-size: 200px;
+    --grid-width: calc(var(--card-size) * 4 + 3rem);
+  }
+}
