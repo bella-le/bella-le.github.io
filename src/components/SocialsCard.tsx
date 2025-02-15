@@ -1,6 +1,7 @@
 import React from 'react';
+import { useResponsiveSpan } from '../hooks/useResponsiveSpan.ts';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faFileLines } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faFileLines, faNewspaper } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin, faInstagram } from '@fortawesome/free-brands-svg-icons';
 import BentoCard from './BentoCard.tsx';
 
@@ -35,11 +36,17 @@ const SocialsCard = () => {
       href: '/img/Bella_Le_Resume.pdf',
       label: 'Resume',
       color: 'text-custom-blue hover:text-custom-blue/80'
+    },
+    {
+      icon: <FontAwesomeIcon icon={faNewspaper} size="lg" />,
+      href: 'https://blog.bella-le.com',
+      label: 'Blog',
+      color: 'text-custom-purple hover:text-custom-purple/80'
     }
   ];
 
   return (
-    <BentoCard colSpan={2} className="bg-custom-rose-light/20 backdrop-blur-sm p-4">
+    <BentoCard colSpan={useResponsiveSpan()} className="bg-custom-rose-light/20 backdrop-blur-sm p-4">
       <div className="flex flex-wrap gap-8 items-center justify-center h-full">
         {socials.map((social) => (
           <a
