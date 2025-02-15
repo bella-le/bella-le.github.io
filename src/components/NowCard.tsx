@@ -49,10 +49,18 @@ const nowItems: NowItem[] = [
     text: "🐐",
   },
   {
+    category: "working on",
+    text: "🎨 & 💻",
+  },
+  {
     category: "working at",
     text: "Netflix 🍿",
     link: "https://www.netflix.com/"
-  }
+  },
+  {
+    category: "setting a goal for",
+    text: "being more socially intentional and deliberate",
+  },
 ];
 
 const NowCard = () => {
@@ -87,10 +95,13 @@ const NowCard = () => {
       colSpan={2} 
       className="bg-custom-purple/20 backdrop-blur-sm p-4 relative overflow-hidden"
     >
-      <div className="flex items-center gap-2 mb-4">
+      <div className="flex items-center justify-between mb-4">
+      <div className="flex items-center gap-2">
         <Clock className="w-5 h-5 text-custom-purple" />
         <span className="text-xs font-medium italic">now</span>
       </div>
+      <span className="text-xs text-gray-400">last updated 2/14/25</span>
+    </div>
       <div className="relative h-[100px] flex items-center">
         <button 
           onClick={prevSlide}

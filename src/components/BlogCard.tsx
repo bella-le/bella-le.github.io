@@ -28,7 +28,7 @@ const BlogCard = () => {
           </span>
           <span className="text-gray-500">✦</span>
           <time className="text-xs">
-            february 11, 2025
+            2/11/25
           </time>
         </div>
       </a>
