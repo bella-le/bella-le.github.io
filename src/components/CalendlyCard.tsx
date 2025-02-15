@@ -17,7 +17,7 @@ const CalendlyCard = () => {
       >
         <div className="flex items-start justify-between w-full">
           <div className="transition-all duration-300 ease-in-out">
-            <h3 className="text-sm font-medium mb-1 transition-all duration-300 ease-in-out group-hover:text-custom-gold/100">let's chat</h3>
+            <h3 className="text-sm font-medium mb-1 transition-all duration-300 ease-in-out group-hover:text-custom-gold/100">let's chat!</h3>
             <p className="text-xs text-gray-600 italic transition-all duration-300 ease-in-out group-hover:text-custom-gold/90">
               mentorship, projects, yaps
             </p>

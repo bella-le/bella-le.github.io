@@ -47,7 +47,7 @@ const SocialsCard = () => {
 
   return (
     <BentoCard colSpan={useResponsiveSpan()} className="bg-custom-rose-light/20 backdrop-blur-sm p-4">
-      <div className="flex flex-wrap gap-8 items-center justify-center h-full">
+      <div className="flex flex-wrap gap-6 items-center justify-center h-full">
         {socials.map((social) => (
           <a
             key={social.label}

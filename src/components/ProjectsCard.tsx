@@ -6,8 +6,10 @@ interface Project {
   id: number;
   title: string;
   description: string;
-  image: string;
+  image?: string;
+  demoUrl: string;
   links: Record<string, string>;
+  tags: string[];
 }
 
 const ProjectsCard = () => {
@@ -19,30 +21,53 @@ const ProjectsCard = () => {
       title: "champagne vs code theme",
       description: "we need more pink IDE themes.",
       image: "/img/projects/champagne.png",
+      demoUrl: "https://marketplace.visualstudio.com/items?itemName=bella-le.champagne",
       links: {
         "github": "https://github.com/bella-le/champagne-theme",
-        "marketplace": "https://marketplace.visualstudio.com/items?itemName=bella-le.champagne"
-      }
+      },
+      tags: ["javascript", "design"]
     },
     {
       id: 2,
       title: "fridge magnets",
       description: "you find a cute little fridge on the internet.",
       image: "/img/projects/fridge-magnets.png",
+      demoUrl: "https://fridge-magnets-production.up.railway.app/",
       links: {
         "github": "https://github.com/bella-le/fridge-magnets",
-        "demo": "https://fridge-magnets-production.up.railway.app/"
-      }
+      },
+      tags: ["react", "node.js", "express", "websocket"]
     },
     {
       id: 3,
       title: "scoopology",
       description: "the cutest ice cream personality quiz!",
       image: "/img/projects/scoopology.webp",
+      demoUrl: "https://bella-le.github.io/scoopology",
       links: {
         "github": "https://github.com/bella-le/scoopology",
-        "demo": "https://bella-le.github.io/scoopology"
-      }
+      },
+      tags: ["react", "typescript"]
+    },
+    {
+      id: 4,
+      title: "walk safe talk safe",
+      description: "an ai safety hotline when you need a fake conversation to deter people from doing something dangerous.",
+      demoUrl: "https://github.com/bella-le/walk-safe-talk-safe",
+      links: {
+        "github": "https://github.com/bella-le/walk-safe-talk-safe",
+      },
+      tags: ["openai", "ngrok", "twilio"]
+    },
+    {
+      id: 5,
+      title: "daily lockbox",
+      description: "a time-based lockbox to lock your phone in for productivity. built for a friend who wanted to lock his phone before going to bed.",
+      demoUrl: "https://github.com/bella-le/daily-lockbox",
+      links: {
+        "github": "https://github.com/bella-le/daily-lockbox",
+      },
+      tags: ["node.js", "express"]
     }
   ];
 
@@ -76,20 +101,36 @@ const ProjectsCard = () => {
                   key={project.id}
                   className="w-full h-full flex-shrink-0 px-1"
                 >
-                  <div className="bg-custom-rose-light/20 backdrop-blur-sm rounded-xl p-6 h-full flex flex-col">
-                    <div className="relative mb-6 w-full aspect-[16/9] flex items-center justify-center overflow-hidden rounded-lg">
-                      <img 
-                        src={project.image} 
-                        alt={project.title}
-                        className="absolute w-full h-full object-cover opacity-80 mix-blend-overlay"
+                  <div className="bg-white/80 backdrop-blur-sm rounded-xl p-6 h-full flex flex-col">
+                    {project.image ? (
+                      <a 
+                        href={project.demoUrl} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="block relative mb-6 w-full aspect-[16/9] overflow-hidden rounded-lg group"
+                      >
+                        <div className="absolute inset-0 bg-custom-rose-light/40 mix-blend-screen z-10 group-hover:bg-custom-rose-light/30 transition-colors"></div>
+                        <img 
+                          src={project.image} 
+                          alt={project.title}
+                          className="absolute w-full h-full object-cover z-0"
                         />
-                    </div>
+                      </a>
+                    ) :
+                    // <>
+                    //   <div className="bg-custom-rose-light/20 flex relative mb-6 w-full aspect-[16/9] overflow-hidden rounded-lg group items-center justify-center">
+                    //     <p className="text-xs text-gray-600 text-opacity-80 leading-relaxed mb-4">backend project</p>
+                    //   </div>
+                    // </>
+                      <div className="block relative mb-6 w-full aspect-[16/9] overflow-hidden rounded-lg group"></div>
+                    }
                     <h4 className="font-medium text-sm mb-3 italic">{project.title}</h4>
                     <p className="text-xs text-gray-600 leading-relaxed mb-4">{project.description}</p>
-                    <div className="flex items-center gap-2 mt-auto text-sm">
-                      {Object.entries(project.links).map(([name, url], index) => (
-                        <React.Fragment key={name}>
+                    <div className="flex flex-col gap-2 mt-auto">
+                      <div className="flex flex-wrap items-center gap-1.5 text-sm">
+                        {Object.entries(project.links).map(([name, url]) => (
                           <a
+                            key={name}
                             href={url}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -97,11 +138,16 @@ const ProjectsCard = () => {
                           >
                             {name}
                           </a>
-                          {/* {index < Object.entries(project.links).length - 1 && (
-                            <span className="text-gray-500">✦</span>
-                          )} */}
-                        </React.Fragment>
-                      ))}
+                        ))}
+                        {project.tags.map((tag) => (
+                          <span
+                            key={tag}
+                            className="px-2 py-0.5 rounded-full bg-custom-purple/10 text-custom-purple/90 text-xs"
+                          >
+                            {tag}
+                          </span>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
