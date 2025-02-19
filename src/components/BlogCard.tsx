@@ -6,20 +6,20 @@ const BlogCard = () => {
   return (
     <BentoCard colSpan={2} className="bg-custom-rose-light/20 backdrop-blur-sm p-6">
       <a 
-        href="https://blog.bella-le.com/%F0%9F%8C%B2+evergreen+words/i+went+to+a+large-group+gathering+and+i+DIDN'T+want+to+wallow+in+a+corner" 
+        href="https://blog.bella-le.com/%F0%9F%8C%B2+evergreen+words/self+expression" 
         target="_blank"
         rel="noopener noreferrer"
         className="flex flex-col h-full group"
       >
         <div className="flex items-start justify-between mb-2">
           <h2 className="text-sm font-medium group-hover:text-custom-rose-light transition-colors italic">
-            i went to a large-group gathering and i DIDN'T want to wallow in a corner
+            self expression
           </h2>
           <ArrowUpRight className="w-6 h-6 text-custom-rose-light" />
         </div>
         
         <p className="text-xs text-gray-600 mb-4 flex-grow">
-        I used to be, and still am to a degree, terribly terribly socially anxious.
+        I think that a lot of people sort of struggle with making up an identity for themselves or expressing themselves in a way that makes them happy.
         </p>
 
         <div className="flex items-center gap-2 text-sm text-gray-400">
@@ -28,7 +28,7 @@ const BlogCard = () => {
           </span>
           <span className="text-gray-500">✦</span>
           <time className="text-xs">
-            2/11/25
+            2/19/25
           </time>
         </div>
       </a>
