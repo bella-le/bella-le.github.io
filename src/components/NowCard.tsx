@@ -61,6 +61,11 @@ const nowItems: NowItem[] = [
     category: "setting a goal for",
     text: "being more socially intentional and deliberate",
   },
+  {
+    category: "rabbitholing",
+    text: "drinking a lot of matcha",
+    link: "https://bella-le.com/matcha-tier-list"
+  },
 ];
 
 const NowCard = () => {
@@ -100,7 +105,7 @@ const NowCard = () => {
         <Clock className="w-5 h-5 text-custom-purple" />
         <span className="text-xs font-medium italic">now</span>
       </div>
-      <span className="text-xs text-gray-400">last updated 2/14/25</span>
+      <span className="text-xs text-gray-400">last updated 3/3/25</span>
     </div>
       <div className="relative h-[100px] flex items-center">
         <button 
