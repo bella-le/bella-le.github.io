@@ -11,16 +11,6 @@ interface NowItem {
 const nowItems: NowItem[] = [
   {
     category: "learning",
-    text: "improv at Leela SF",
-    link: "https://leela-sf.com/"
-  },
-  {
-    category: "learning",
-    text: "singing lessons at Songbird Studios",
-    link: "https://songbirdsf.com/"
-  },
-  {
-    category: "learning",
     text: "日本語を勉強しています~",
     link: "https://www.italki.com/"
   },
@@ -30,42 +20,18 @@ const nowItems: NowItem[] = [
     link: "https://www.goodreads.com/book/show/4929.Kafka_on_the_Shore"
   },
   {
-    category: "reading",
-    text: "Dandadan",
-    link: "https://www.viz.com/shonenjump/chapters/dandadan"
-  },
-  {
-    category: "reading",
-    text: "Frieren",
-    link: "https://www.viz.com/vizmanga/chapters/frieren-the-journeys-end"
-  },
-  {
-    category: "reading",
-    text: "Spy x Family",
-    link: "https://www.viz.com/shonenjump/chapters/spy-x-family"
-  },
-  {
-    category: "working on",
-    text: "🐐",
-  },
-  {
     category: "working on",
     text: "🎨 & 💻",
   },
   {
     category: "working at",
-    text: "Netflix 🍿",
-    link: "https://www.netflix.com/"
+    text: "Substack 📙",
+    link: "https://substack.com/"
   },
   {
     category: "setting a goal for",
     text: "being more socially intentional and deliberate",
-  },
-  {
-    category: "rabbitholing",
-    text: "drinking a lot of matcha",
-    link: "https://bella-le.com/matcha-tier-list"
-  },
+  }
 ];
 
 const NowCard = () => {
